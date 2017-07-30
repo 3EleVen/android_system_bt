@@ -1322,7 +1322,7 @@ static void btif_dm_auth_cmpl_evt (tBTA_DM_AUTH_CMPL *p_auth_cmpl)
         // notification for the BR/EDR transport so that the subsequent BR/EDR connections
         // to the remote can use the derived link key.
         if ((bdcmp(p_auth_cmpl->bd_addr, pairing_cb.bd_addr) != 0) &&
-              (!pairing_cb.ble.is_penc_key_rcvd)) {
+              (!pairing_cb.is_penc_key_rcvd)) {
             char address[32];
             bt_bdaddr_t bt_bdaddr;
 
